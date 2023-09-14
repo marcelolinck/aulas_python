@@ -4,6 +4,12 @@
 print ("### Informacoes de ###")
 
 nome = input ("Informe o seu nome: ")
-idade = int(input("Informe a sua idade: "))
+idade = input("Informe a sua idade: ")
+
+while not idade.isnumeric():
+    print("A sua idade deve ser de numeros inteiros e sem pontos. Tente novamente.")
+    idade = input("Informe novamente a sua idade: ")
+
+idade = int(idade)
 
 print("Meu nome eh",nome ,"e minha idade eh ", idade,".")
